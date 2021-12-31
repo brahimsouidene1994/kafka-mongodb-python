@@ -1,0 +1,18 @@
+description:
+    in this project i'm trying to use kafka apache to generate random data and stored in local mongodb
+    then i extracted that data also with kafka and based on that data, i fetch  the way i want using services
+in order to run this project :
+    -make sure you installed kafka apache
+    -go to that kafka directory and then start a 2 terminal
+    -in each terminal run the following commands:
+       terminal one => $.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+       terminal two => $.\bin\windows\kafka-server-start.bat .\config\server.properties
+    -next run your local mongodb and create database named : "users_database"
+    -then in this project run producer.py and consumer.py
+        => this files will insert random data in collection "kafka_users",
+            in the meanwhile u can either stop the execution if u want to stop filling the database
+            or let it on
+    -next run the two files producer_db.py and consumer_db.py
+        => this files will read from mongodb and fetch the data on the browser each 10 sec with refreshing the webpage
+        if there is a new data filled in the database
+*hope you find this project very helpful this my email for more info : "souidenebrahim@gamil.com"
